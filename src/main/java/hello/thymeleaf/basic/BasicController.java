@@ -87,7 +87,7 @@ public class BasicController {
 	@GetMapping("/operation")
 	public String operation(Model model) {
 		model.addAttribute("nullData", null);
-		model.addAttribute("data", "Spring!");
+		model.addAttribute("data", "thymeleaf data");
 		return "basic/operation";
 	}
 
@@ -107,6 +107,12 @@ public class BasicController {
 		addUsers(model);
 
 		return "basic/condition";
+	}
+
+	@GetMapping("/comments")
+	public String comments(Model model) {
+		model.addAttribute("data", "Spring!");
+		return "basic/comments";
 	}
 
 	private void addUsers(Model model) {
