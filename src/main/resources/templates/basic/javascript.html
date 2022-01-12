@@ -23,5 +23,13 @@
     //객체
     let user = [[${user}]];
 </script>
+
+<!-- 자바스크립트 인라인 each -->
+<script th:inline="javascript">
+    [# th:each="user, stat : ${users}"]
+    let user[[${stat.count}]] = [[${user}]];
+    [/]
+</script>
+
 </body>
 </html>
